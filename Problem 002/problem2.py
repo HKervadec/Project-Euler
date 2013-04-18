@@ -18,5 +18,5 @@ while u1 <= 4000000:
 	tmp = u1
 	u1 += u
 	u = tmp
-		
+
 print(sum)
