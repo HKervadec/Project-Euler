@@ -17,7 +17,7 @@ def prime(n):
 # **********************************8	
 number = 600851475143
 i = 3
-maxPrimeFactor = 1
+maxPrimeFactor = 1 #ceci dit en passant, 1 n'est pas premier
 lim = sqrt(number)
 
 while i < lim:

@@ -15,8 +15,7 @@ while u1 <= 4000000:
 	if not u1 % 2:
 		sum += u1
 		
-	tmp = u1
-	u1 += u
-	u = tmp
-
+	(u, u1) = (u1, u1 + u)
+	
+	
 print(sum)
