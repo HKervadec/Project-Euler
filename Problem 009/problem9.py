@@ -20,13 +20,11 @@ lim = 1001
 while b < lim:
 	c = 1
 	while c < lim:
-		if b + c > 1000:
+		if b + c > lim - 1:
 			break
-		
 		
 		if prop(b,c):
 			a = int(math.sqrt(c**2 - b**2))
-			# print(a,b,c)
 			print(a*b*c)
 			b = lim
 			c = lim

@@ -3,18 +3,22 @@
 
 # Find the sum of all the primes below two million.
 
-from math import *
+from math import sqrt
 
 def prime(n):
 	max = int(sqrt(n))
 	
-	for i in range(2, max + 1):
+	i = 3
+	while i <= max:
 		if not n % i:
 			return False
-			
-	return True
+		
+		i += 2
 	
+	return True
 
+
+# ******************************************************************************
 sum = 2
 limit = 2000000
 
