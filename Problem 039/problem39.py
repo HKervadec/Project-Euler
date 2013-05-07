@@ -4,39 +4,37 @@
 # {20,48,52}, {24,45,51}, {30,40,50}
 
 # For which value of p <= 1000, is the number of solutions maximised?
+	
+def prop(a, p):
+	tmp = (p*(p-2*a))%(2*(p-a))
+	tmp2 = (p*(p-2*a))/(2.0*(p-a))
+	return (tmp == 0 and tmp2 > 0, tmp2)
 
-
-def prop(b, c, p):
-	tmp = b*b - (p*(b+c) - b*c)
-	tmp2 = -(p**2)/2
-	return tmp == tmp2
 	
 def numberOfSolutions(p):
 	result = 0
-	lim = p/2
-	
-	for b in range(1,lim):
-		for c in range(1,lim):
-			if b + c > p:
-				break
-				
-			if prop(b, c, p):
-				result += 1
-				
+
+	a = 1
+	(bool, b) = prop(a, p)
+	while a < b:
+		(bool, b) = prop(a, p)
+		if bool:
+			result += 1
+		a += 1
+		
 	return result
-	
 	
 # ******************************************************************************
 solutions = 0
 pMax = -1
 
-for p in range(3,1001):
+for p in range(4, 1001, 2):
 	if not p % 100:
 		print('.'),
-		
+
 	tmp = numberOfSolutions(p)
-	if tmp > solutions:
-		solutions = tmp
-		pMax = p
 	
+	if tmp > solutions:
+		(solutions, pMax) = (tmp, p)
+
 print(pMax)

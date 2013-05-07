@@ -6,12 +6,14 @@
 # numbers from 1 to 20?
 
 def divisible(n):
-	for i in range(3, 21):
+	for i in range(3, 20):
 		if n % i:
 			return False
 			
 	return True
 	
+	
+# ******************************************************************************
 i = 20
 
 while not divisible(i):

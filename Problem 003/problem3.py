@@ -3,11 +3,13 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
-from math import *
 
 def prime(n):
-	lim = int(sqrt(n))
-	for i in range(2,lim):
+	if not n % 2:
+		return False
+	
+	lim = int(n**0.5)
+	for i in range(3, lim + 1, 2):
 		if not n % i:
 			return False
 			
@@ -18,7 +20,7 @@ def prime(n):
 number = 600851475143
 i = 3
 maxPrimeFactor = 1 #ceci dit en passant, 1 n'est pas premier
-lim = sqrt(number)
+lim = number**0.5
 
 while i < lim:
 	if not (number % i):
