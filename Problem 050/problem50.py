@@ -8,8 +8,7 @@
 
 # Which prime, below one-million, can be written as the sum of the most consecutive primes?
 
-from sortedList import sortedList
-from utils import prime
+from utils import prime, sortedList
 from time import time
 
 def sumOfPrimes(n, primeSum):

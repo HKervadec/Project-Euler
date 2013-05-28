@@ -9,12 +9,12 @@
 # Find the pair of pentagonal numbers, Pj and Pk, for which their sum and difference are 
 # pentagonal and D = |Pk - Pj| is minimised; what is the value of D?
 
-from sortedList import *
+from utils import sortedList
 import time
 
 startTime = time.time()
 
-pentagonal = lambda n : n*(3*n - 1)/2
+pentagonal = lambda n : n*(3*n - 1)//2
 
 pentagonalList = sortedList([])
 

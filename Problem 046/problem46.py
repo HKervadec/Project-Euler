@@ -29,8 +29,7 @@ def conjecture(a):
     return False
 
 # ********************************************************************
-from sortedList import sortedList
-from utils import prime
+from utils import prime, sortedList
 import time
 
 startTime = time.time()
