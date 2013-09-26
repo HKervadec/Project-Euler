@@ -47,11 +47,10 @@ def xor(text, password):
     
     
 def valide(text):
+    global charList
+    
     for letter in text:
-        value = ord(letter)
-        # if (value < ord('A') and value != ord(' ')) or (value > ord('z')) or (value > ord('Z') and value < ord('a')):
-        if (value < 30) or (value > 122) or (value > 90 and value < 97):
-        # if value < ord(' ') or value > ord('z'):
+        if not letter in charList:
             return False
             
     return True
@@ -93,7 +92,7 @@ encryptedText = ""
 for letter in content:
     encryptedText += chr(int(letter))
     
-
+charList = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 (),.;:\'"?-_!'
 password = ['a', 'a', 'a']
 iter = range(len(password))
 
@@ -105,7 +104,6 @@ while password != ['{', 'a', 'a']:
         validText = decryptedText
         # print(decryptedText[:30], password)
         break
-        
     
     password = nextPassword(password)
     
