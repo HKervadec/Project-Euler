@@ -107,7 +107,7 @@ while password != ['{', 'a', 'a']:
     
     password = nextPassword(password)
     
-print(validText)
+print("{0}: {1}".format(password, validText))
 print(sumText(validText))
 print(time() - startTime)
 

@@ -17,5 +17,4 @@ while u1 <= 4000000:
 		
 	(u, u1) = (u1, u1 + u)
 	
-	
 print(sum)

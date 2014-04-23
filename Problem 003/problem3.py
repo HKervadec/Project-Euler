@@ -3,6 +3,7 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
+from time import time
 
 def prime(n):
 	if not n % 2:
@@ -16,10 +17,12 @@ def prime(n):
 	return True
 
 	
-# **********************************8	
+# **************************************
+startTime = time()
+
 number = 600851475143
 i = 3
-maxPrimeFactor = 1 #ceci dit en passant, 1 n'est pas premier
+maxPrimeFactor = 1 # ceci dit en passant, 1 n'est pas premier
 lim = number**0.5
 
 while i < lim:
@@ -33,3 +36,20 @@ while i < lim:
 	i += 2
 	
 print(maxPrimeFactor)
+print(time() - startTime)
+
+
+startTime = time()
+
+number = 600851475143
+i = 2
+
+while i < number:
+    if not number % i:
+        number //= i
+        i = 2
+    else:
+        i += 1
+
+print(number)
+print(time() - startTime)
