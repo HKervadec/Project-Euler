@@ -7,42 +7,51 @@
 
 # What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 
+
+from time import time
+
+
 def factorial(n):
-	if n < 2:
-		return 1
-		
-	return n * factorial(n-1)
-	
+    result = n
+    for i in range(1, n):
+        result *= i
 
-def getNPermutation(numberList, n):
-	listCopy = []
-	for i in numberList:
-		listCopy.append(i)
+    return result
 
-	pos = []
-	div = len(listCopy) - 1
-	n -= 1
-	
-	while div > 0:
-		tmp = factorial(div)
-		
-		pos.append(n//tmp)
-		n %= tmp
-		div -= 1
-		
-	result = ""
-	
-	for k in pos:
-		result += str(listCopy[k])
-		del listCopy[k]
-	result += str(listCopy[0])
-	
-	return result
+
+# Careful, it will destroy the initList argument
+def getNPermutation(initList, n):
+    """
+
+    @param initList: list containing the elements to permute. It is the 0th permutation.
+    @param n: the permutation index
+    @return: the nth permutation, according to init list
+    """
+    pos = []
+    n -= 1
+
+    for div in range(len(initList) - 1, 0, -1):
+        fac = factorial(div)
+
+        pos.append(n//fac)
+        n %= fac
+
+    result = ""
+    for k in pos:
+        result += initList[k]
+        del initList[k]
+    result += initList[0]
+
+    return result
 
 
 # ********************************************************************
-liste = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 permutationList = [1000000, factorial(10)]
+init = "0123456789"
 
 for n in permutationList:
-	print(getNPermutation(liste, n))
+    param = list(init)
+    param.sort()
+    startTime = time()
+    print(getNPermutation(param, n))
+    print("%f ms\n" % (time() - startTime))

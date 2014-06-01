@@ -220,7 +220,7 @@ def tests():
     # 15
     print("One Pair")
     print("20 = %d" % onePair(['5H', '5C', '6S', '7S', 'KD']))
-    print("25 = %d" % onePair(['TC', '3S', '8S', '8D', 'TD'])) # ~
+    print("25 = %d" % onePair(['TC', '3S', '8S', '8D', 'TD']))
     print("-1 = %d" % onePair(['2C', '3S', '5S', '8D', 'TD']))
     print("-1 = %d" % onePair(['2D', '9C', 'AS', 'AH', 'AC']))
 
