@@ -1,14 +1,14 @@
 import math
 
-def gen_stats(max):
-    tab = (math.floor(math.log10(max))+1)*[0]
+def gen_stats(max, power):
+    tab = max*[0]
 
     i = 1
 
     while True:
-        cube = i**3
+        cube = i**power
 
-        if cube >= max:
+        if cube >= 10**max:
             break
 
         pos = math.floor(math.log10(cube))
@@ -20,8 +20,17 @@ def gen_stats(max):
     return tab
 
 
-max = 10000000000000
-stats = gen_stats(max)
+max = 20
+max_cube = 5
+stats = (max_cube + 1)*[0]
 
-for i in range(math.floor(math.log10(max))):
-    print("[10^%d:10^%d] %d" %(i, i+1, stats[i]))
+for n in range(2, max_cube+1):
+    stats[n] = gen_stats(max, n)
+
+for i in range(max):
+    line = "[10^%d:10^%d] " %(i, i+1)
+
+    for n in range(2, max_cube+1):
+        line += "%d " % stats[n][i]
+
+    print(line)

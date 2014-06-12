@@ -5,6 +5,7 @@
 
 import unittest
 from time import time
+import cProfile
 
 def gen_cube(minValue, maxValue):
     dest = []
@@ -20,8 +21,17 @@ def gen_cube(minValue, maxValue):
 
     return dest
 
+
 def are_permutations(a, b):
-    return stats_digits(a) == stats_digits(b)
+    return get_stat(a) == get_stat(b)
+
+
+stats = {}
+def get_stat(a):
+    if not stats.__contains__(a):
+        stats[a] = stats_digits(a)
+
+    return stats[a]
 
 
 def stats_digits(a):
@@ -34,40 +44,38 @@ def stats_digits(a):
     return list
 
 
-def find_set(current_set, remaining_cube, goal, last_index):
+def find_set(current_set, remaining_cube, goal):
     if(len(current_set) == goal):
         return current_set
 
-    for i in range(last_index, len(remaining_cube)):
-        copy_set = current_set[:]
+    for i in range(len(remaining_cube)):
         if len(current_set) == 0 or are_permutations(current_set[0], remaining_cube[i]):
+            copy_set = current_set[:]
             copy_set.append(remaining_cube[i])
-            copy_remaining = remove_nth(remaining_cube[:], i)
 
-            tmp = find_set(copy_set, copy_remaining, goal, i)
+            tmp = find_set(copy_set, remaining_cube[i + 1:], goal)
 
             if tmp != []:
                 return tmp
 
     return []
 
-def remove_nth(list, n):
-    return list[:n] + list[min(len(list), n+1):]
 
 def mother_set(goal):
     min = 1
 
-    tmp = [1]
+    tmp = []
     while True:
         cubes = gen_cube(min, 10*min)
 
-        tmp = find_set([], cubes, goal, 0)
+        tmp = find_set([], cubes, goal)
         if tmp != []:
             break
 
         min *= 10
 
     return tmp
+
 
 def resolve_problem(goal):
     return mother_set(goal)[0]
@@ -104,7 +112,7 @@ class  TestPermutations(unittest.TestCase):
 
     def test_subject_example(self):
         cubes = gen_cube(1, 100000000)
-        result = find_set([], cubes, 3, 0)
+        result = find_set([], cubes, 3)
         result.sort()
         self.assertEqual(result, [41063625, 56623104, 66430125])
         self.assertEqual(result[0], 41063625)
@@ -114,9 +122,14 @@ class  TestPermutations(unittest.TestCase):
 
     def test_resolve_problem(self):
         self.assertEqual(resolve_problem(3), 41063625)
-        self.assertEqual(resolve_problem(5), 127035954683)
 
 
 # ###########################################################
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+
+    # cProfile.run('resolve_problem(5)')
+
+    startTime = time()
+    print(resolve_problem(5))
+    print(time() - startTime)
