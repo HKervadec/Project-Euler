@@ -33,12 +33,15 @@ int main()
     int numberOfFactor = 1;
     int limit = 500;
 
-    for(int i = 2 ; 1 ; number += i++){
+    int i = 2;
+    while(1){
         numberOfFactor = factorNumber(number);
 
         if(numberOfFactor >= limit){
             break;
         }
+
+        number += i++;
     }
 
     printf("%d\n", number);
