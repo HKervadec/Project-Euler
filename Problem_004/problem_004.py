@@ -6,7 +6,6 @@
 
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-from time import time
 from tools.utils import palindrome, measure_func
 
 def solve_2():

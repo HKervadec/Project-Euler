@@ -2,18 +2,25 @@ from math import *
 from time import time
 
 
-def measure_func(func):
+def is_square(a):
+    sqr = sqrt(a)
+
+    return sqr**2 == a
+
+def measure_func(func, args=None):
     """
     Run the function given as parameter and print the output and time needed to run the function.
     @param func: The function to measure
     """
     startTime = time()
-    print(func())
+    if args:
+        print(func(args))
+    else:
+        print(func())
     tot = time() - startTime
     print(tot)
 
     return tot
-
 
 def fact(n):
     """
@@ -63,6 +70,19 @@ def toList(n):
     return result
 
 
+def gen_numbers(n):
+    """
+    Generate the numbers of the parameters, in reverse order.
+
+    :param n:
+    :return:
+    :rtype: generator of int
+    """
+    while n > 0:
+        yield n % 10
+        n //= 10
+
+
 def palindrome(string):
     """
     Test if the given string is a palindrome.
@@ -106,72 +126,3 @@ def digitNumber(n):
 
     return total
 
-class fraction:
-
-    def __init__(self, a, b):
-        self.a = int(a)
-        self.b = int(b)
-        self.simplifie()
-
-
-    def __add__(self, frac):
-        self.a *= frac.b
-        self.a += frac.a * self.b
-        self.b *= frac.b
-
-        # self.simplifie()
-
-        return self
-
-
-    def __sub__(self, frac):
-        self.a *= frac.b
-        self.a -= frac.a * self.b
-        self.b *= frac.b
-
-        # self.simplifie()
-
-        return self
-
-
-    def __mul__(self, frac):
-        self.a *= frac.a
-        self.b *= frac.b
-
-        # self.simplifie()
-
-        return self
-
-
-    def __truediv__(self, frac):
-        self.a *= frac.b
-        self.b *= frac.a
-
-        # self.simplifie()
-
-        return self
-
-
-    def __str__(self):
-        return str(self.a) + '/' + str(self.b)
-
-
-    def simplifie(self):
-        while not self.a % 2 and not self.b % 2:
-            self.a //= 2
-            self.b //=2
-
-        i = 3
-        lim = sqrt(self.a)
-        while i <= lim:
-            if not self.a % i and not self.b % i:
-                self.a //= i
-                self.b //= i
-                lim = sqrt(self.a)
-                i = 3
-
-            i += 2
-
-
-    def inverse(self):
-        (self.a, self.b) = (self.b, self.a)
