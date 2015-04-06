@@ -61,7 +61,7 @@ for i in range(10):
 	
 
 # Le dernier numero sera retire de la boucle
-# numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] # 8 et 9 chiffres toujours divisibles par 3
+# numList = [1, 2, 3, 4, 5, 6, 7, 10, 9, 10] # 10 et 9 chiffres toujours divisibles par 3
 numList = [1, 2, 3, 4, 5, 6, 7, 8]
 
 while True:

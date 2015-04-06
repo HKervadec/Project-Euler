@@ -1,0 +1,477 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"g",
+				"genCpl"
+			],
+			[
+				"min",
+				"min_n"
+			],
+			[
+				"gen",
+				"gen_phi"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"max",
+				"max_n"
+			],
+			[
+				"ch",
+				"check_substring"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Problem_001/problem_001.hs",
+			"settings":
+			{
+				"buffer_size": 442,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Problem_002/problem_002.hs",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Problem_004/problem_004.hs",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Problem_002/problem_002.py",
+			"settings":
+			{
+				"buffer_size": 606,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Problem_001/problem_001.py",
+			"settings":
+			{
+				"buffer_size": 817,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Problem_004/problem_004.py",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Haskell/Haskell.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"latex",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"gchi",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Github/Project-Euler",
+		"/D/Github/Project-Euler/Problem_004"
+	],
+	"file_history":
+	[
+		"/C/Users/ZomZom/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/ZomZom/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Github/Project-Euler/Problem_001/problem_001.py",
+		"/D/owncloud/couisine/site/index.php",
+		"/D/Github/Project-Euler/tools/prime.py",
+		"/D/Github/Project-Euler/problem_070/problem_070.py",
+		"/D/Github/Project-Euler/problem_069/problem_069.py",
+		"/D/Github/Project-Euler/problem_070/problem_070.c",
+		"/D/Github/Project-Euler/problem_069/problem_069.c",
+		"/D/Github/Project-Euler/battle_dev/laby.c",
+		"/D/Github/Project-Euler/problem_069/prime.h",
+		"/D/Github/Project-Euler/problem_069/prime.c",
+		"/D/Github/tp4info/ALGO/assignment_4/input/content.tex",
+		"/D/Github/tp4info/ALGO/assignment_4/main.tex",
+		"/D/Github/tp4info/ALGO/assignment_3/input/content.tex",
+		"/D/Github/tp4info/ALGO/assignment_3/main.tex",
+		"/X/timestamps.txt",
+		"/X/project_euler.txt",
+		"/X/fgsfds.txt",
+		"/X/appart/caf/infos.txt",
+		"/C/Users/ZomZom/AppData/Local/Temp/134-boul-de-Sev_LBC_VMouloud.txt",
+		"/C/Users/ZomZom/AppData/Local/Temp/134-boul-de-Sev_LBC.txt",
+		"/D/Github/korrigolo/reports/1 - preetude/main.tex",
+		"/D/Installeurs/ADB-Driver-v1.4.2/How to Install.txt",
+		"/D/Github/tp4info/ALGO/assignment_1/input/content.tex",
+		"/D/Github/tp4info/.gitignore",
+		"/D/Github/tp4info/ALGO/assignment_1/main.aux"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"max",
+			"min",
+			"start",
+			")\n",
+			"n",
+			"]);\n",
+			"));\n",
+			"\");\n",
+			"float",
+			"b",
+			");\n",
+			" )",
+			"\\nonumber\\\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"end",
+			"start",
+			"end",
+			"double",
+			"\\\\\\nonumber"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Problem_001/problem_001.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Problem_002/problem_002.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								19
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Problem_004/problem_004.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Problem_002/problem_002.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								434,
+								434
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Problem_001/problem_001.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "Problem_004/problem_004.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								721,
+								721
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.517777777778,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 177.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "eul.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 345.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

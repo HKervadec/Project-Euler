@@ -22,6 +22,19 @@ def gen_permutations_2(l):
             yield [l[i]] + sp
 
 
+def heap_gen(n, A):
+    if n == 1:
+        yield(A)
+    else:
+        for i in range(1, n+1):
+            heap_gen(n - 1, A)
+
+            j = i
+            if n % 2:
+                j = 1
+
+            A[j], A[n] = A[n], A[j]
+
 
 def evaluate_func(f):
     i = 0

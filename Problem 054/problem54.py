@@ -14,7 +14,7 @@
     # Royal Flush: Ten, Jack, Queen, King, Ace, in same suit.
 
 # The cards are valued in the order:
-# 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace.
+# 2, 3, 4, 5, 6, 7, 10, 9, 10, Jack, Queen, King, Ace.
 
 # If two players have the same ranked hands then the rank made up of the highest 
 # value wins; for example, a pair of eights beats a pair of fives (see example 1 
@@ -213,7 +213,7 @@ def winner(turn):
     
 
 def cardValue(card):
-    return {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}[card[0]]
+    return {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '10':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}[card[0]]
     
 # ******************************************************************************
 def tests():

@@ -17,9 +17,8 @@ def gen_e_divisors(n):
 
     if n == 2:
         yield 1
-        n -= 1
-    if n <= 1:
-        yield 2
+
+    yield 2
 
 
 class Div:
@@ -52,10 +51,15 @@ def solve(n=100):
 def solve_2(n=100):
     return sum(gen_numbers(reduce(apply, gen_e_divisors(n), Div(1, 0)).num))
 
+def solve_3(n=100):
+    return sum(gen_numbers(reduce(lambda x,y: (x[1]+y*x[0],x[0]), gen_e_divisors(n), (1,0))[0]))
+
 
 if __name__ == "__main__":
     measure_func(solve)
     measure_func(solve_2)
+    measure_func(solve_3)
 
-    measure_func(solve, args=10000)
-    measure_func(solve_2, args=10000)
+    # measure_func(solve, args=100000)
+    # measure_func(solve_2, args=100000)
+    # measure_func(solve_3, args=100000)
