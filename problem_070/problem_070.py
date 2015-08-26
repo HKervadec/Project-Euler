@@ -2,11 +2,40 @@
 
 # https://projecteuler.net/problem=70
 
-from tools.utils import measure_func, gen_numbers
+from sys import argv
+
+# from tools.utils import measure_func, gen_numbers
 from functools import reduce
 from operator import __or__
 
-import profile
+# import profile
+
+def measure_func(func, args=None):
+    """
+    Run the function given as parameter and print the output and time needed to run the function.
+    @param func: The function to measure
+    """
+    startTime = time()
+    if args:
+        print(func(args))
+    else:
+        print(func())
+    tot = time() - startTime
+    print(tot)
+
+    return tot
+
+def gen_numbers(n):
+    """
+    Generate the numbers of the parameters, in reverse order.
+
+    :param n:
+    :return:
+    :rtype: generator of int
+    """
+    while n > 0:
+        yield n % 10
+        n //= 10
 
 
 def gen_primes(lim):
@@ -90,4 +119,9 @@ def solve(lim=10000000):
 if __name__ == "__main__":
     # measure_func(solve, 10000000)
 
-    profile.run("solve(10000000)")
+    if len(argv) > 1:
+        print(solve(int(argv[1])))
+    else:
+        print(solve())
+
+    # profile.run("solve(10000000)")
