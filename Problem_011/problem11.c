@@ -30,10 +30,6 @@ The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 What is the greatest product of four adjacent numbers in any direction 
 (up, down, left, right, or diagonally) in the 20×20 grid? */
 
-const int haut = 0;
-const int bas = 4;
-const int gauche = 2;
-const int droite = 6;
 const int size = 20;
 const int dirI[8] = {-1, -1, 0, 1, 1, 1, 0,-1};
 const int dirJ[8] = {0, -1, -1,-1, 0, 1, 1, 1};
@@ -68,41 +64,40 @@ int main()
 
     int i = 0, j = 0;
 
-    // Affichage de la grille
-    // for(i = 0 ; i < 20 ; i ++){
-        // for(j = 0 ; j < 20 ; j++){
-            // printf("%2d ", tab[i][j]);
-        // }
-        // printf("\n");
-    // }
+    /*
+    for(i = 0 ; i < 20 ; i ++){
+        for(j = 0 ; j < 20 ; j++){
+            printf("%2d ", tab[i][j]);
+        }
+        printf("\n");
+    }
+    //*/
 
     int k = 0;
-    int productMax = 0, produit = 0;
+    int maxProduct = 0, produit = 0;
 
-    //Calcul du produit max
-    for(i = 0 ; i < 20 ; i++){//parcours vertical
-        for(j = 0 ; j < 20 ; j++){//parcours vertical
-            for(k = 0 ; k < 8 ; k++){//parcours dans toutes les directions
+    for(i = 0 ; i < 20 ; i++){
+        for(j = 0 ; j < 20 ; j++){
+            for(k = 0 ; k < 8 ; k++){
                 produit = product(tab, i, j, k);
 
-                if(produit > productMax){
-                    // printf("Changement: %d => %d\n", productMax, produit);
-                    productMax = produit;
+                if(produit > maxProduct){
+                    // printf("Changement: %d => %d\n", maxProduct, produit);
+                    maxProduct = produit;
                 }
             }
         }
     }
 
-    printf("Le produit max est: %d", productMax);
+    printf("Le produit max est: %d", maxProduct);
 
     return 0;
 }
 
 int product(int tab[][size], int i, int j, int direction)
 {
-    int a = i, b = j;
+    // int a = i, b = j;
 
-    // on verifie que l'on ne va pas depasser
     if(i + dirI[direction] * 3 > 19
        || i + dirI[direction] * 3 < 0
        || j + dirJ[direction] * 3 > 19
@@ -118,7 +113,7 @@ int product(int tab[][size], int i, int j, int direction)
         j += dirJ[direction];
     }
 
-    //printf("| i %2d| j %2d| dir %2d| Product %8d\n", a, b, direction, product);
+    // printf("| i %2d| j %2d| dir %2d| Product %8d\n", a, b, direction, product);
 
     return product;
 }
