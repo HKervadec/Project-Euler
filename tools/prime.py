@@ -16,7 +16,7 @@ def prime(n):
     return True
 
 
-class SuperPrime():
+class SuperPrime:
     """
         Keep track of previously results. Usefull if we have to test
         again and again the same numbers.
